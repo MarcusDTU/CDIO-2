@@ -1,11 +1,17 @@
 class Field{
     int [] money = {250, -100, 100,-20, 180, 0, -70, 60, -80, -50, 650};
+    int tempDieValue;
 
-
-    public static boolean extraTurn(){
+    public boolean extraTurn(){
         boolean extraTurn = false;
 
-        var dieValue = 
+        var dieValue = tempDieValue;
+        if(dieValue == 10){
+            extraTurn = true;
+        }
+        else{
+            extraTurn = false;
+        }
 
 
 
