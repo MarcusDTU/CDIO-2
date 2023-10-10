@@ -1,9 +1,11 @@
 class Field{
 
 
-    public fieldPoint(){
+    public int fieldPoint(int [] dieArray){
+        int balanceChange; 
         int [] money = {250, -100, 100,-20, 180, 0, -70, 60, -80, -50, 650};
-        
+        balanceChange = money[dieArray[2]];
+        return balanceChange;
     }
 
     public boolean extraTurn(int []dieArray){
