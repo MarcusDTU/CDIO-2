@@ -4,6 +4,7 @@ class Account {
     
     public Account(int id) {
         this.id = id;
+        this.cashBalance = 1000;
     }
 
     public int getCashBalance() {
