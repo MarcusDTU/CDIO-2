@@ -1,12 +1,12 @@
-public class Player {
+class Player {
     private String name;
-    private int ID;
-    public int account;
+    public int ID;
+    public Account account;
 
-    public Player(String name int ID) {
+    public Player(String name, int ID) {
         this.name = name;
         this.ID = ID;
-        this.account = account(ID)
+        this.account = new Account(ID);
     }
 
     public String getName() {
