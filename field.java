@@ -1,6 +1,6 @@
 class Field{
 
-    //test
+
 
     public static int fieldPoint(int [] dieArray){
         int balanceChange; 
