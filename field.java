@@ -1,5 +1,5 @@
 class Field{
-    //test
+    
 
 
     public static int fieldPoint(int [] dieArray){
@@ -22,9 +22,7 @@ class Field{
         else{
             extraTurn = false;
         }
-        if(true){
-            
-        }
+       
 
 
 
