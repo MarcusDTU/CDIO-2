@@ -14,9 +14,20 @@ class Account {
     public void setCashBalance(int money) {
         if (this.cashBalance + money >= 0) {
         this.cashBalance += money;
+        System.out.println("Money deposited, but you're still broke");
         }
         else {
             this.cashBalance = 0;
+            System.out.println("You're broke and couldn't pay your bills");
         }
+    }
+
+//Test to see i program is behaving as wanted
+    public static void main(String[] args) {
+    Account t1 = new Account(13);
+        //setCashBalance(100);
+    t1.setCashBalance(-1100);
+    int hej = t1.getCashBalance();
+    System.out.println(hej);
     }
 }
