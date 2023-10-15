@@ -3,7 +3,7 @@ class Field{
 
 
     public static int fieldPoint(int [] rolls){
-        /*check witch field the player rolled and return the money cooresponding to the dice sum */
+        /*check which field the player rolled and return the money cooresponding to the dice sum */
         int balanceChange; 
         int [] money = {250, -100, 100,-20, 180, 0, -70, 60, -80, -50, 650};
         balanceChange = money[rolls[2]];
