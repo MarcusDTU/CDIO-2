@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Die {
+class Die {
     private int numberOfRolls;
     private int numberOfSides;
     private Random random;
