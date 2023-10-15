@@ -5,6 +5,9 @@ class Message {
     private String description;
     private static String language;
 
+    // The class constructors takes id and messageClass as input, and populates the
+    // description via getTranslatedDescription. It is set to private, as another
+    // function will be used to generate a Message array outside the class.
     private Message(int id, int messageClass) {
         this.id = id;
         this.messageClass = messageClass;
