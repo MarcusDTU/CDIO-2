@@ -5,6 +5,12 @@ class Message {
     private String description;
     private static String language;
 
+    private Message(int id, int messageClass) {
+        this.id = id;
+        this.messageClass = messageClass;
+        this.description = getTranslatedDescription(language, this.messageClas, this.id);
+    }
+
     // language must be set via setLanguage, before Message objects are created.
     // This is due to the fact that language is used to generate descriptions for
     // Message objects.
@@ -14,70 +20,72 @@ class Message {
 
     // This methods populates the description of a Message object, based on
     // language, id and messageClass;
-    private void getTranslatedDescription(Message message) {
-        if (this.language.equals("english")) {
+    private static String getTranslatedDescription(String language, int messageClass, int id) {
+        String returnDescription = "";
+        if (language.equals("english")) {
             // messageClass 0 is for system messages.
-            if (this.messageClass == 0) {
-                if (this.id == 0) {
-                    this.description = "";
+            if (messageClass == 0) {
+                if (id == 0) {
+                    returnDescription = "";
                 }
             }
             // messageClass 1 is for game-related messages that do not belong to either roll
             // or die.
-            if (this.messageClass == 1) {
-                if (this.id == 0) {
-                    this.description = "";
+            if (messageClass == 1) {
+                if (id == 0) {
+                    returnDescription = "";
                 }
             }
             // messageClass 2 is for roll-related messages.
-            if (this.messageClass == 2) {
-                if (this.id == 0) {
-                    this.description = "";
+            if (messageClass == 2) {
+                if (id == 0) {
+                    returnDescription = "";
                 }
             }
             // messageClass 3 is for field-related messages, where the id matches the sum of
             // the roll.
-            if (this.messageClass == 3) {
-                if (this.id == 0) {
-                    this.description = "";
+            if (messageClass == 3) {
+                if (id == 0) {
+                    returnDescription = "";
                 }
-                if (this.id == 1) {
-                    this.description = "";
+                if (id == 1) {
+                    returnDescription = "";
                 }
-                if (this.id == 2) {
-                    this.description = "";
+                if (id == 2) {
+                    returnDescription = "";
                 }
-                if (this.id == 3) {
-                    this.description = "";
+                if (id == 3) {
+                    returnDescription = "";
                 }
-                if (this.id == 4) {
-                    this.description = "";
+                if (id == 4) {
+                    returnDescription = "";
                 }
-                if (this.id == 5) {
-                    this.description = "";
+                if (id == 5) {
+                    returnDescription = "";
                 }
-                if (this.id == 6) {
-                    this.description = "";
+                if (id == 6) {
+                    returnDescription = "";
                 }
-                if (this.id == 7) {
-                    this.description = "";
+                if (id == 7) {
+                    returnDescription = "";
                 }
-                if (this.id == 8) {
-                    this.description = "";
+                if (id == 8) {
+                    returnDescription = "";
                 }
-                if (this.id == 9) {
-                    this.description = "";
+                if (id == 9) {
+                    returnDescription = "";
                 }
-                if (this.id == 10) {
-                    this.description = "";
+                if (id == 10) {
+                    returnDescription = "";
                 }
-                if (this.id == 11) {
-                    this.description = "";
+                if (id == 11) {
+                    returnDescription = "";
                 }
-                if (this.id == 12) {
-                    this.description = "";
+                if (id == 12) {
+                    returnDescription = "";
                 }
             }
         }
+        return returnDescription;
     }
 }
