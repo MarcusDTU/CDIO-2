@@ -1,4 +1,4 @@
-public class Message {
+class Message {
 
     private int id;
     private int messageClass;
@@ -9,7 +9,7 @@ public class Message {
         language = languageInput;
     }
 
-    private String getTranslatedDescription(String language, Message message) {
+    private void getTranslatedDescription(String language, Message message) {
         if (language.equals("english")) {
             // messageClass 0 is for system messages.
             if (this.messageClass == 0) {
