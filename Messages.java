@@ -75,7 +75,10 @@ class Message {
             // messageClass 2 is for roll-related messages.
             if (messageClass == 2) {
                 if (id == 0) {
-                    returnDescription = "";
+                    returnDescription = "How many rolls are wanted for each turn?";
+                }
+                if (id == 1) {
+                    returnDescription = "How many sides are wanted for each die?";
                 }
             }
             // messageClass 3 is for field-related messages, where the id matches the sum of
