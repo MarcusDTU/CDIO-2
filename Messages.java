@@ -3,6 +3,11 @@ public class Message {
     private int id;
     private int messageClass;
     private String description;
+    private static String language;
+
+    public void setLanguage(String languageInput) {
+        language = languageInput;
+    }
 
     private String getTranslatedDescription(String language, Message message) {
         if (language.equals("english")) {
