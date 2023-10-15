@@ -1,6 +1,7 @@
 public class Message {
+
     private int id;
-    private String messageClass;
+    private int messageClass;
     private String description;
 
 }
