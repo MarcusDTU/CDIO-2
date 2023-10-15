@@ -14,11 +14,12 @@ class Account {
     public void setCashBalance(int money) {
         if (this.cashBalance + money >= 0) {
         this.cashBalance += money;
-        System.out.println("Money deposited, but you're still broke");
+        System.out.println("Money deposited, but you're still broke"); //Add custom messages from message class
         }
         else {
             this.cashBalance = 0;
-            System.out.println("You're broke and couldn't pay your bills");
+            
+            System.out.println("You're broke and couldn't pay your bills"); //Add custom messages from message class
         }
     }
 
