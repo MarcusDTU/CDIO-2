@@ -4,6 +4,13 @@ class Message {
     private int messageClass;
     private String description;
     private static String language;
+    // These are used by createMessageArray to create a bi-dimensional jagged array
+    // of Message objects.
+    private static int numberOfMessageClasses = 4;
+    private static int numberOfSystemMessages = 1;
+    private static int numberOfGameMessages = 1;
+    private static int numberOfRollMessages = 1;
+    private static int numberOfFieldMessages = 13;
 
     // The class constructors takes id and messageClass as input, and populates the
     // description via getTranslatedDescription. It is set to private, as another
@@ -19,6 +26,33 @@ class Message {
     // Message objects.
     public void setLanguage(String languageInput) {
         language = languageInput;
+    }
+
+    // This method is used to create a Message[][], which contains all messages of a
+    // given language. The first row contains system messages, the second row
+    // contains game messages, the third row contains roll messages, and the fourth
+    // row contains field messages.
+    public Message[][] createMessageArray() {
+        Message[] systemMessages = new Message[numberOfSystemMessages];
+        for (int i = 0; i < systemMessages.length; i++) {
+            systemMessages[i] = new Message(i, 0);
+        }
+        Message[] gameMessages = new Message[numberOfGameMessages];
+        for (int i = 0; i < gameMessages.length; i++) {
+            gameMessages[i] = new Message(i, 1);
+        }
+        Message[] rollMessages = new Message[numberOfRollMessages];
+        for (int i = 0; i < rollMessages.length; i++) {
+            rollMessages[i] = new Message(i, 2);
+        }
+        Message[] fieldMessages = new Message[numberOfFieldMessages];
+        for (int i = 0; i < fieldMessages.length; i++) {
+            fieldMessages[i] = new Message(i, 3);
+        }
+        Message[][] messageArray = new Message[][] { systemMessages, gameMessages, rollMessages, fieldMessages };
+
+        return messageArray;
+
     }
 
     // This methods populates the description of a Message object, based on
