@@ -1,5 +1,5 @@
 class Account {
-    public int id;
+    private int id;
     private int cashBalance;
     
     public Account(int id) {
@@ -10,29 +10,13 @@ class Account {
     public int getCashBalance() {
         return this.cashBalance;
     }
-}
 
-/*class Player {
-    private String name;
-    public int ID;
-    public Account account;
-
-    public Player(String name, int ID) {
-        this.name = name;
-        this.ID = ID;
-        this.account = new Account(ID);
-    }
-
-    public String getName() {
-        return name;
+    public void setCashBalance(int money) {
+        if (this.cashBalance + money >= 0) {
+        this.cashBalance += money;
+        }
+        else {
+            this.cashBalance = 0;
+        }
     }
 }
-
-class Test {
-    public static void main(String[] args) {
-        var David = new Player("David", 13);
-
-        System.out.println(David.account.getCashBalance());
-
-    }
-}*/
