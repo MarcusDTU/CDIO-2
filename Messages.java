@@ -9,8 +9,8 @@ class Message {
         language = languageInput;
     }
 
-    private void getTranslatedDescription(String language, Message message) {
-        if (language.equals("english")) {
+    private void getTranslatedDescription(Message message) {
+        if (this.language.equals("english")) {
             // messageClass 0 is for system messages.
             if (this.messageClass == 0) {
                 if (this.id == 0) {
