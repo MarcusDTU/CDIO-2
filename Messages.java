@@ -5,10 +5,15 @@ class Message {
     private String description;
     private static String language;
 
+    // language must be set via setLanguage, before Message objects are created.
+    // This is due to the fact that language is used to generate descriptions for
+    // Message objects.
     public void setLanguage(String languageInput) {
         language = languageInput;
     }
 
+    // This methods populates the description of a Message object, based on
+    // language, id and messageClass;
     private void getTranslatedDescription(Message message) {
         if (this.language.equals("english")) {
             // messageClass 0 is for system messages.
