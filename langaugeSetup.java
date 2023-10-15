@@ -1,6 +1,7 @@
-class language{
+class languageselecter{
     public String languageSetup(){
         boolean languageFound = false;
+        String gameLanguage = "";
         //create scanner obj
         var scanner = new java.util.Scanner(System.in);
         scanner.useLocale(java.util.Locale.ENGLISH);
@@ -14,7 +15,7 @@ class language{
         
             //check what language has been choosen
             if(language.equals("1")){
-                String gameLanguage = "english";
+                gameLanguage = "english";
                 System.out.println("English has been choosen");
                 languageFound = true;
             }
@@ -27,5 +28,6 @@ class language{
         }
         scanner.close();
         return gameLanguage;
+        
     }
 }
