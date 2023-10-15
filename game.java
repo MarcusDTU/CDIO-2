@@ -16,5 +16,11 @@ class game{
         
        var test = Player1.account.getCashBalance();
        System.out.println(test);
+
+       //creating dice
+       var scanner = new java.util.Scanner(System.in);
+       
+       Die Die = new Die(0, 0);
+
     }
 }
