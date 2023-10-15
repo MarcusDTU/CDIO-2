@@ -6,15 +6,17 @@ class game{
         scanner.useLocale(java.util.Locale.ENGLISH);
         String newline = System.lineSeparator();
 
-        System.out.println("Choose language" + newline + "1 for English" + newline + "2 for Danish");
+        System.out.println("Choose language:" + newline + "1 for English" + newline + "2 for Danish");
         
         var language = scanner.nextInt();
+        
+        //check what language has been choosed
         if(language == 1){
             String gameLanguage = "english";
         }
         
         scanner.close();
-        
+
        
         
 
