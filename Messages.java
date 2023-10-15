@@ -6,7 +6,6 @@ class Message {
     private static String language;
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
-    private static int numberOfMessageClasses = 4;
     private static int numberOfSystemMessages = 1;
     private static int numberOfGameMessages = 1;
     private static int numberOfRollMessages = 1;
@@ -18,7 +17,7 @@ class Message {
     private Message(int id, int messageClass) {
         this.id = id;
         this.messageClass = messageClass;
-        this.description = getTranslatedDescription(language, this.messageClas, this.id);
+        this.description = getTranslatedDescription(language, this.messageClass, this.id);
     }
 
     // language must be set via setLanguage, before Message objects are created.
@@ -124,5 +123,9 @@ class Message {
             }
         }
         return returnDescription;
+    }
+
+    public void printDescription() {
+        System.out.println(this.description);
     }
 }
