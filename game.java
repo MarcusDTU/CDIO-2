@@ -23,7 +23,7 @@ class game{
        var numberOfRolls = scanner.nextInt();
        System.out.println("messageClass 2, 1"); // add from msg
        var numberOfSides = scanner.nextInt();
-       Die Die = new Die(numberOfRolls, numberOfSides);
+       Die die = new Die(numberOfRolls, numberOfSides);
 
     }
 }
