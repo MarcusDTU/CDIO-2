@@ -139,7 +139,7 @@ class Message {
 // id 2:
 // ...
 // GAME MESSAGES:
-// id 0:
+// id 0: Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
 // id 1:
 // id 2:
 // ...
