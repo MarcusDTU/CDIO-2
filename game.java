@@ -19,9 +19,9 @@ class game{
 
        //creating dice
        var scanner = new java.util.Scanner(System.in);
-       System.out.println("messageClass 2, 0"); // add from msg
+       System.out.println("messageClass 0, 0"); //add from msg
        var numberOfRolls = scanner.nextInt();
-       System.out.println("messageClass 2, 1"); // add from msg
+       System.out.println("messageClass 0, 1"); //add from msg
        var numberOfSides = scanner.nextInt();
        Die die = new Die(numberOfRolls, numberOfSides);
 
