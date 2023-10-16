@@ -84,7 +84,7 @@ class Message {
             // messageClass 0 is for system messages.
             if (messageClass == 0) {
                 if (id == 0) {
-                    returnDescription = "";
+                    returnDescription = " How many rolls are wanted for each turn?";
                 }
                 if (id == 1) {
                     returnDescription = "How many sides are wanted for each die?";
@@ -94,14 +94,30 @@ class Message {
             // or die.
             if (messageClass == 1) {
                 if (id == 0) {
-                    returnDescription = "";
+                    returnDescription = "Players will take turns, rolling two dice to move to a field labeled\r\n" + 
+                            "with numbers from 2 to 12. Each field can either increase or decrease the\r\n" + 
+                            "player's money. All players start with a 1000 balance, and the winner is the\r\n" + 
+                            "first to reach 3000.";
+                }
+                if (id == 1){
+                    returnDescription = "Your updated cash balance is: ";       
                 }
             }
             // messageClass 2 is for roll-related messages.
             if (messageClass == 2) {
                 if (id == 0) {
-                    returnDescription = "";
+                    returnDescription = " Press enter to roll die.";
                 }
+                  if (id == 1) {
+                    returnDescription = " The value of die one is: ";
+                }
+                  if (id == 2) {
+                    returnDescription = "The value of die two is: ";
+                }
+                  if (id == 3) {
+                    returnDescription = " Total sum of dice is: ";
+                }
+
             }
             // messageClass 3 is for field-related messages, where the id matches the sum of
             // the roll.
