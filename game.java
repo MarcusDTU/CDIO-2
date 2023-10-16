@@ -37,6 +37,11 @@ class game{
             //Gets the field value and sets  player's cash balance 
             var points = fieldPoint(rolls[2]);
             Player1.setPlayerCashBalance(points);
+
+            //Prints field info and updated player account balance
+            System.out.println(messages[3][rolls[2]]);
+            var updatedCashBalance = Player1.getPlayerAccountBalance();
+            System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
         }
     }
 }
