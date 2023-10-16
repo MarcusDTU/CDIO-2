@@ -18,19 +18,16 @@ class game{
         System.out.println(test);
 
         //creating dice
-        var scanner = new java.util.Scanner(System.in);
-        System.out.println(messages[0][0]);
-        var numberOfRolls = scanner.nextInt();
-        System.out.println(messages[0][1]);
-        var numberOfSides = scanner.nextInt();
-        Die die = new Die(numberOfRolls, numberOfSides);
+        var die = createDie();
 
         //Game prints the game info explaning the overall game flow
-        System.out.println(messages[1][0]);
+        System.out.println(messages[1][0]); //Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
         
         //Game runs in a while loop which checks if a winner has been found. If not the game will continue to ask players to roll dice
         while(!winnerFound()) {
-            
+            System.out.println(messages[2][0]); // roll die?
+            roll die;
+            System.out.println();
         }
     }
 }
