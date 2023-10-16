@@ -9,26 +9,30 @@ class Player {
         this.account = new Account(id);
     }
 
-    public static Player createPlayer(int i) {
-        // Taking the names of players.
-        var scannerCreate = new java.util.Scanner(System.in);
-        System.out.println("Please enter the name of player " + i + ": ");
-        var name = scannerCreate.nextLine();
-        Player player = new Player(name, i);
-        return player; 
-    }
-
+    /*
+     * public static Player createPlayer(int i) {
+     * // Taking the names of players.
+     * var scannerCreate = new java.util.Scanner(System.in);
+     * System.out.println("Please enter the name of player " + i + ": ");
+     * var name = scannerCreate.nextLine();
+     * Player player = new Player(name, i);
+     * return player;
+     * }
+     */
     public String getName() {
         return name;
     }
-    public int getAccountBalance() {
+
+    public int getPlayerAccountBalance() {
         return this.account.getCashBalance();
     }
 
-    public int getAccountId() {
+    // Id always matches its associated account id.
+    public int getId() {
         return this.id;
     }
-    public void setCashBalance(int money) {
+
+    public void setPlayerCashBalance(int money) {
         this.account.setCashBalance(money);
     }
 }
