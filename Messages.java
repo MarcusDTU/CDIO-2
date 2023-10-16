@@ -3,6 +3,7 @@ class Message {
     private int id;
     private int messageClass;
     private String description;
+    private String idDescription;
     private static String language;
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
@@ -18,6 +19,7 @@ class Message {
         this.id = id;
         this.messageClass = messageClass;
         this.description = getTranslatedDescription(language, this.messageClass, this.id);
+        this.idDescription = this.createIdDescription();
     }
 
     // language must be set via setLanguage, before Message objects are created.
@@ -54,8 +56,28 @@ class Message {
 
     }
 
+    // Generates an id description based on messageClass and id of a Message object
+    private String createIdDescription() {
+        String output;
+        if (this.messageClass == 0) {
+            output = "SYS-";
+        }
+        if (this.messageClass == 1) {
+            output = "GAME-";
+        }
+        if (this.messageClass == 2) {
+            output = "ROLL-";
+        }
+        if (this.messageClass == 3) {
+            output = "FIELD-";
+        }
+        output = output + toString(this.id);
+        return output;
+    }
+
     // This methods populates the description of a Message object, based on
     // language, id and messageClass;
+
     private static String getTranslatedDescription(String language, int messageClass, int id) {
         String returnDescription = "";
         if (language.equals("english")) {
