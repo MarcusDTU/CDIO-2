@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 class game{
     public static void main(String[] args){
@@ -26,8 +26,12 @@ class game{
         //Game runs in a while loop which checks if a winner has been found. If not the game will continue to ask players to roll dice
         while(!winnerFound()) {
             System.out.println(messages[2][0]); //Press enter to roll die.
-            var roll = rollDie();
-            System.out.println();
+            var roll = Scanner.nextLine("");
+            while (roll != "") {
+                System.out.println(messages[2][0]); //Press enter to roll die.
+            }
+            var rolls = rollDie();
+            System.out.println(rolls);
         }
     }
 }
