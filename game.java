@@ -63,8 +63,9 @@ class game{
                 if(ekstraTurn == false){
                     playerTurn = 2;   
                 }
+            }
                 
-                else if(playerTurn == 2) {
+            else if(playerTurn == 2) {
                     System.out.println(messages[2][0]); //Press enter to roll die.
                     roll = Scanner.nextLine("");
                     
@@ -99,7 +100,7 @@ class game{
                         playerTurn = 1;
                         
                     }
-                }
+                
             }    
         }
         scanner.close();
