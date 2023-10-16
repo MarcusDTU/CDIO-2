@@ -132,3 +132,24 @@ class Message {
         System.out.println(this.description);
     }
 }
+// LIST OF MESSAGES:
+// SYSTEM MESSAGES:
+// id 0:
+// id 1:
+// id 2:
+// ...
+// GAME MESSAGES:
+// id 0:
+// id 1:
+// id 2:
+// ...
+// ROLL MESSAGES:
+// id 0:
+// id 1:
+// id 2:
+// ...
+// FIELD MESSAGES:
+// id 0:
+// id 1:
+// id 2:
+// ...
