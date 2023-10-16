@@ -147,7 +147,7 @@ class Message {
 // id 2:
 // ...
 // ROLL MESSAGES:
-// id 0:
+// id 0: Press enter to roll die.
 // id 1:
 // id 2:
 // ...
