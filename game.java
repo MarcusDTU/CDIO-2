@@ -97,8 +97,7 @@ class game{
                 ekstraTurn = ekstraTurn(rolls);
                 
                 if(ekstraTurn == false){
-                    playerTurn = 1;
-                    
+                    playerTurn = 1;    
                 }
             }    
         }
