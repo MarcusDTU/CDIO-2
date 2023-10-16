@@ -27,11 +27,11 @@ class game{
         while(!winnerFound()) {
             System.out.println(messages[2][0]); //Press enter to roll die.
             var roll = Scanner.nextLine("");
-            while (roll != "") {
+            while (!(roll.equals(""))) {
                 System.out.println(messages[2][0]); //Press enter to roll die.
             }
-            var rolls = rollDie();
-            System.out.println(rolls);
+            int[] rolls = rollDie();
+            System.out.println(messages[2][1] + " " + rolls[0] + System.lineSeparator() + messages[2][2] + "" + rolls[1] + System.lineSeparator() + messages[2][3] + "" + rolls[2]);
         }
     }
 }
