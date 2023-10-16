@@ -8,7 +8,7 @@ class game{
         //gameLanguageForMsg is the string that has beed saved from the languageSetup method and returns the selected language for later use in messege class
         var gameLanguageForMsg = gameLanguageObj.languageSetup();
 
-        Message[][] messages = new Message[][].createMessageArray();
+        Message[][] messages = Message.createMessageArray();
 
         //creating the to players 
         Player Player1 = new Player("test1", 1);
@@ -33,6 +33,8 @@ class game{
             int[] rolls = die.rollDie();
             System.out.println(messages[2][1] + "" + rolls[0] + System.lineSeparator() + messages[2][2] + "" + rolls[1] + System.lineSeparator() + messages[2][3] + "" + rolls[2]);
             // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
+
+
         }
     }
 }
