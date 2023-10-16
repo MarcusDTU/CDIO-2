@@ -143,13 +143,14 @@ class Message {
 // with numbers from 2 to 12. Each field can either increase or decrease the
 // player's money. All players start with a 1000 balance, and the winner is the
 // first to reach 3000.
-// id 1:
+// id 1: Your updated cash balance is:(space after ": ")
 // id 2:
 // ...
 // ROLL MESSAGES:
 // id 0: Press enter to roll die.
-// id 1:
-// id 2:
+// id 1: The value of die one is:(space after ": ")
+// id 2: The value of die two is:(space after ": ")
+// id 3: Total sum of dice is:(space after ": ")
 // ...
 // FIELD MESSAGES:
 // id 0:
