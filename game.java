@@ -66,41 +66,40 @@ class game{
             }
                 
             else if(playerTurn == 2) {
-                    System.out.println(messages[2][0]); //Press enter to roll die.
-                    roll = Scanner.nextLine("");
-                    
-                    while (!(roll.equals(""))) {
-                        System.out.println(messages[2][0]); //Press enter to roll die.
-                    }
-                    
-                    rolls = die.rollDie();
-                    System.out.println(messages[2][1] + "" + rolls[0] + System.lineSeparator() + messages[2][2] + "" + rolls[1] + System.lineSeparator() + messages[2][3] + "" + rolls[2]);
-                    // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
-
-                    //Gets the field value and sets  player's cash balance 
-                    points = fieldPoint(rolls[2]);
-                    Player1.setPlayerCashBalance(points);
-
-                    //Prints field info and updated player account balance
-                    System.out.println(messages[3][rolls[2]]);
-                    updatedCashBalance = Player1.getPlayerAccountBalance();
-                    System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
-
-                    //check if player1 has won
-                    winnerFound = getWinCon(Player1);
-                    
-                    // if the winner has been found it break out of the while loop
-                    if(winnerFound) {
-                        break;
-                    }
-                    
-                    ekstraTurn = ekstraTurn(rolls);
-                    
-                    if(ekstraTurn == false){
-                        playerTurn = 1;
-                        
-                    }
+                System.out.println(messages[2][0]); //Press enter to roll die.
+                roll = Scanner.nextLine("");
                 
+                while (!(roll.equals(""))) {
+                    System.out.println(messages[2][0]); //Press enter to roll die.
+                }
+                
+                rolls = die.rollDie();
+                System.out.println(messages[2][1] + "" + rolls[0] + System.lineSeparator() + messages[2][2] + "" + rolls[1] + System.lineSeparator() + messages[2][3] + "" + rolls[2]);
+                // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
+
+                //Gets the field value and sets  player's cash balance 
+                points = fieldPoint(rolls[2]);
+                Player1.setPlayerCashBalance(points);
+
+                //Prints field info and updated player account balance
+                System.out.println(messages[3][rolls[2]]);
+                updatedCashBalance = Player1.getPlayerAccountBalance();
+                System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
+
+                //check if player1 has won
+                winnerFound = getWinCon(Player1);
+                
+                // if the winner has been found it break out of the while loop
+                if(winnerFound) {
+                    break;
+                }
+                
+                ekstraTurn = ekstraTurn(rolls);
+                
+                if(ekstraTurn == false){
+                    playerTurn = 1;
+                    
+                }
             }    
         }
         scanner.close();
