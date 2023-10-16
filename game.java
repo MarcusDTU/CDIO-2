@@ -25,8 +25,8 @@ class game{
         
         //Game runs in a while loop which checks if a winner has been found. If not the game will continue to ask players to roll dice
         while(!winnerFound()) {
-            System.out.println(messages[2][0]); // roll die?
-            roll die;
+            System.out.println(messages[2][0]); //Press enter to roll die.
+            var roll = rollDie();
             System.out.println();
         }
     }
