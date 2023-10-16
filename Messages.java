@@ -31,7 +31,7 @@ class Message {
     // given language. The first row contains system messages, the second row
     // contains game messages, the third row contains roll messages, and the fourth
     // row contains field messages.
-    public Message[][] createMessageArray() {
+    public static Message[][] createMessageArray() {
         Message[] systemMessages = new Message[numberOfSystemMessages];
         for (int i = 0; i < systemMessages.length; i++) {
             systemMessages[i] = new Message(i, 0);
@@ -139,7 +139,10 @@ class Message {
 // id 2:
 // ...
 // GAME MESSAGES:
-// id 0: Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
+// id 0: Players will take turns, rolling two dice to move to a field labeled
+// with numbers from 2 to 12. Each field can either increase or decrease the
+// player's money. All players start with a 1000 balance, and the winner is the
+// first to reach 3000.
 // id 1:
 // id 2:
 // ...
