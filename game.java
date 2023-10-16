@@ -13,11 +13,14 @@ class game{
         Message[][] messages = Message.createMessageArray();
 
         //creating the to players 
-        Player Player1 = new Player("test1", 1);
-        Player Player2 = new Player("test2", 2);
-            
-        var test = Player1.getAccountBalance();
-        System.out.println(test);
+        var scannerCreate = new Scanner(System.in);
+        System.out.println("Please enter the name of player 1: ");
+        var name1 = scannerCreate.nextLine();
+        Player Player1 = new Player(name1, 1);
+        System.out.println("Please enter the name of player 2: ");
+        var name2 = scannerCreate.nextLine();
+        Player Player2 = new Player(name2, 2);
+        scannerCreate.close();
 
         //creating dice
         var die = createDie();
@@ -26,10 +29,12 @@ class game{
         System.out.println(messages[1][0]); //Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
         
         //Game runs in a while loop which checks if a winner has been found. If not the game will continue to ask players to roll dice
+        Scanner scanner = new Scanner(System.in);
         while(!winnerFound) {
+            
             if(playerTurn == 1) {
                 System.out.println(messages[2][0]); //Press enter to roll die.
-                var roll = Scanner.nextLine("");
+                var roll = scanner.nextLine("");
                 while (!(roll.equals(""))) {
                     System.out.println(messages[2][0]); //Press enter to roll die.
                 }
@@ -97,5 +102,6 @@ class game{
                 }
             }    
         }
+        scanner.close();
     }
 }
