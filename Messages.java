@@ -3,6 +3,7 @@ class Message {
     private int id;
     private int messageClass;
     private String description;
+    private String idDescription;
     private static String language;
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
@@ -18,6 +19,7 @@ class Message {
         this.id = id;
         this.messageClass = messageClass;
         this.description = getTranslatedDescription(language, this.messageClass, this.id);
+        this.idDescription = this.createIdDescription();
     }
 
     // language must be set via setLanguage, before Message objects are created.
@@ -54,15 +56,35 @@ class Message {
 
     }
 
+    // Generates an id description based on messageClass and id of a Message object
+    private String createIdDescription() {
+        String output;
+        if (this.messageClass == 0) {
+            output = "SYS-";
+        }
+        if (this.messageClass == 1) {
+            output = "GAME-";
+        }
+        if (this.messageClass == 2) {
+            output = "ROLL-";
+        }
+        if (this.messageClass == 3) {
+            output = "FIELD-";
+        }
+        output = output + toString(this.id);
+        return output;
+    }
+
     // This methods populates the description of a Message object, based on
     // language, id and messageClass;
+
     private static String getTranslatedDescription(String language, int messageClass, int id) {
         String returnDescription = "";
         if (language.equals("english")) {
             // messageClass 0 is for system messages.
             if (messageClass == 0) {
                 if (id == 0) {
-                    returnDescription = "How many rolls are wanted for each turn?";
+                    returnDescription = "";
                 }
                 if (id == 1) {
                     returnDescription = "How many sides are wanted for each die?";
@@ -134,8 +156,8 @@ class Message {
 }
 // LIST OF MESSAGES:
 // SYSTEM MESSAGES:
-// id 0:
-// id 1:
+// id 0: How many rolls are wanted for each turn?
+// id 1: How many sides are wanted for each die?
 // id 2:
 // ...
 // GAME MESSAGES:
@@ -143,13 +165,14 @@ class Message {
 // with numbers from 2 to 12. Each field can either increase or decrease the
 // player's money. All players start with a 1000 balance, and the winner is the
 // first to reach 3000.
-// id 1:
+// id 1: Your updated cash balance is:(space after ": ")
 // id 2:
 // ...
 // ROLL MESSAGES:
-// id 0:
-// id 1:
-// id 2:
+// id 0: Press enter to roll die.
+// id 1: The value of die one is:(space after ": ")
+// id 2: The value of die two is:(space after ": ")
+// id 3: Total sum of dice is:(space after ": ")
 // ...
 // FIELD MESSAGES:
 // id 0:

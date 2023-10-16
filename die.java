@@ -22,6 +22,17 @@ class Die {
         }
         return rolls;
     }
+
+    public static Die createDie() {
+        var scanner = new java.util.Scanner(System.in);
+        System.out.println(messages[0][0]); //How many rolls are wanted for each turn?
+        var numberOfRolls = scanner.nextInt();
+        System.out.println(messages[0][1]); //How many sides are wanted for each die?
+        var numberOfSides = scanner.nextInt();
+        Die die = new Die(numberOfRolls, numberOfSides);
+
+        return die;
+    }
     
 
        
