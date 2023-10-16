@@ -1,13 +1,13 @@
 import javax.annotation.processing.Messager;
 class languageselecter{
-    public String languageSetup(){
+    public void languageSetup(){
         boolean languageFound = false;
         String gameLanguage = "";
         //create scanner obj
         var scanner = new java.util.Scanner(System.in);
         scanner.useLocale(java.util.Locale.ENGLISH);
         String newline = System.lineSeparator();
-
+        
         
         while(!languageFound){
             System.out.println("Choose language:" + newline + "1 for English" + newline + "2 for Danish");
@@ -28,7 +28,8 @@ class languageselecter{
         
         }
         scanner.close();
-        return gameLanguage;
+        
+       Message.setLanguage(gameLanguage);
         
     }
 }
