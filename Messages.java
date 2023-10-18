@@ -58,7 +58,7 @@ class Message {
 
     // Generates an id description based on messageClass and id of a Message object
     private String createIdDescription() {
-        String output;
+        String output = "";
         if (this.messageClass == 0) {
             output = "SYS-";
         }
@@ -71,7 +71,7 @@ class Message {
         if (this.messageClass == 3) {
             output = "FIELD-";
         }
-        output = output + toString(this.id);
+        output = output + Integer.toString(this.id);
         return output;
     }
 
