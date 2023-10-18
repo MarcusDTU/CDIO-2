@@ -46,7 +46,7 @@ class game{
                 }
 
                 int[] rolls = die.rollDie();
-                System.out.println(messages[2][1] + "" + rolls[0] + System.lineSeparator() + messages[2][2] + "" + rolls[1] + System.lineSeparator() + messages[2][3] + "" + rolls[2]);
+                System.out.println(messages[2][1].getDesciption() + "" + rolls[0] + System.lineSeparator() + messages[2][2].getDesciption() + "" + rolls[1] + System.lineSeparator() + messages[2][3].getDesciption() + "" + rolls[2]);
                 // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
 
                 //Gets the field value and sets  player's cash balance 
@@ -56,7 +56,7 @@ class game{
                 //Prints field info and updated player account balance
                 messages[3][rolls[2]].printDescription();
                 var updatedCashBalance = Player1.getPlayerAccountBalance();
-                System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
+                System.out.println(messages[1][1].getDesciption() + "" + updatedCashBalance); //Your updated cash balance is:
 
                 //check if player1 has won
                 winnerFound = WinCondition.getWinCon(Player1);
@@ -81,7 +81,7 @@ class game{
                 }
                 
                 int [] rolls = die.rollDie();
-                System.out.println(messages[2][1] + "" + rolls[0] + System.lineSeparator() + messages[2][2] + "" + rolls[1] + System.lineSeparator() + messages[2][3] + "" + rolls[2]);
+                System.out.println(messages[2][1].getDesciption() + "" + rolls[0] + System.lineSeparator() + messages[2][2].getDesciption() + "" + rolls[1] + System.lineSeparator() + messages[2][3].getDesciption() + "" + rolls[2]);
                 // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
 
                 //Gets the field value and sets  player's cash balance 
@@ -91,7 +91,7 @@ class game{
                 //Prints field info and updated player account balance
                 messages[3][rolls[2]].printDescription();
                 var updatedCashBalance = Player2.getPlayerAccountBalance();
-                System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
+                System.out.println(messages[1][1].getDesciption() + "" + updatedCashBalance); //Your updated cash balance is:
 
                 //check if player1 has won
                 winnerFound = WinCondition.getWinCon(Player2);
