@@ -10,7 +10,7 @@ class Field{
         return balanceChange;
     }
 
-    public boolean extraTurn(int rolls){
+    public static boolean extraTurn(int rolls){
         /*Checks if the dice sum is 10 and then return a true value */
         boolean extraTurn = false;
 
