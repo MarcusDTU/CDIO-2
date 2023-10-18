@@ -4,6 +4,7 @@ class Die {
     private int numberOfRolls;
     private int numberOfSides;
     private Random random;
+    
     public Die (int numberOfRolls, int numberOfSides){
         this.numberOfRolls =numberOfRolls;
         this.numberOfSides = numberOfSides;
@@ -24,6 +25,7 @@ class Die {
     }
 
     public static Die createDie() {
+        Message[][] messages = Message.createMessageArray();
         var scanner = new java.util.Scanner(System.in);
         System.out.println(messages[0][0]); //How many rolls are wanted for each turn?
         var numberOfRolls = scanner.nextInt();
