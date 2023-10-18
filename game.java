@@ -34,7 +34,7 @@ class game{
             
             if(playerTurn == 1) {
                 System.out.println(messages[2][0]); //Press enter to roll die.
-                var roll = scanner.nextLine("");
+                var roll = scanner.nextLine();
                 
                 while (!(roll.equals(""))) {
                     System.out.println(messages[2][0]); //Press enter to roll die.
