@@ -169,6 +169,9 @@ class Message {
     public void printDescription() {
         System.out.println(this.description);
     }
+    public String getDesciption(){
+        return this.description;
+    }
 }
 // LIST OF MESSAGES:
 // SYSTEM MESSAGES:
