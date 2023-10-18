@@ -3,7 +3,7 @@ import java.util.Scanner;
 class game{
     public static void main(String[] args){
         boolean winnerFound = false;
-        boolean ekstraTurn = false;
+        boolean extraTurn = false;
         int playerTurn = 1;
         languageselecter gameLanguageObj = new languageselecter();
         
@@ -60,9 +60,9 @@ class game{
                 if(winnerFound) {
                     break;
                 }
-                ekstraTurn = Field.extraTurn(rolls[2]);
+                extraTurn = Field.extraTurn(rolls[2]);
                 
-                if(ekstraTurn == false){
+                if(extraTurn == false){
                     playerTurn = 2;   
                 }
             }
@@ -96,9 +96,9 @@ class game{
                     break;
                 }
                 
-                ekstraTurn = Field.extraTurn(rolls[2]);
+                extraTurn = Field.extraTurn(rolls[2]);
                 
-                if(ekstraTurn == false){
+                if(extraTurn == false){
                     playerTurn = 1;    
                 }
             }    
