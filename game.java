@@ -60,7 +60,7 @@ class game{
                 if(winnerFound) {
                     break;
                 }
-                ekstraTurn = extraTurn(rolls);
+                ekstraTurn = extraTurn(rolls[2]);
                 
                 if(ekstraTurn == false){
                     playerTurn = 2;   
@@ -96,7 +96,7 @@ class game{
                     break;
                 }
                 
-                ekstraTurn = extraTurn(rolls);
+                ekstraTurn = extraTurn(rolls[2]);
                 
                 if(ekstraTurn == false){
                     playerTurn = 1;    
