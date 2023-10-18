@@ -24,11 +24,13 @@ class game{
         Player Player2 = new Player(name2, 2);
         //scanner.close();
 
+
+        
         //creating dice
         var die = Die.createDie();
-
+        
         //Game prints the game info explaning the overall game flow
-        System.out.println(messages[1][0]); //Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
+        messages[1][0].printDescription();; //Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
         
         //Game runs in a while loop which checks if a winner has been found. If not the game will continue to ask players to roll dice
         scanner = new java.util.Scanner(System.in);
@@ -36,11 +38,11 @@ class game{
         while(!winnerFound) {
             
             if(playerTurn == 1) {
-                System.out.println(messages[2][0]); //Press enter to roll die.
+                messages[2][0].printDescription(); //Press enter to roll die.
                 var roll = scanner.nextLine();
                 
                 while (!(roll.equals(""))) {
-                    System.out.println(messages[2][0]); //Press enter to roll die.
+                    messages[2][0].printDescription(); //Press enter to roll die.
                 }
 
                 int[] rolls = die.rollDie();
@@ -52,7 +54,7 @@ class game{
                 Player1.setPlayerCashBalance(points);
 
                 //Prints field info and updated player account balance
-                System.out.println(messages[3][rolls[2]]);
+                messages[3][rolls[2]].printDescription();
                 var updatedCashBalance = Player1.getPlayerAccountBalance();
                 System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
 
@@ -71,11 +73,11 @@ class game{
             }
                 
             else if(playerTurn == 2) {
-                System.out.println(messages[2][0]); //Press enter to roll die.
+                messages[2][0].printDescription(); //Press enter to roll die.
                 var roll = scanner.nextLine();
                 
                 while (!(roll.equals(""))) {
-                    System.out.println(messages[2][0]); //Press enter to roll die.
+                    messages[2][0].printDescription(); //Press enter to roll die.
                 }
                 
                 int [] rolls = die.rollDie();
@@ -87,7 +89,7 @@ class game{
                 Player2.setPlayerCashBalance(points);
 
                 //Prints field info and updated player account balance
-                System.out.println(messages[3][rolls[2]]);
+                messages[3][rolls[2]].printDescription();
                 var updatedCashBalance = Player2.getPlayerAccountBalance();
                 System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
 
