@@ -36,7 +36,7 @@ class Message {
     public static Message[][] createMessageArray() {
         Message[] systemMessages = new Message[numberOfSystemMessages];
         for (int i = 0; i < systemMessages.length; i++) {
-            systemMessages[i] = new Message(i, 0);
+            systemMessages[i] = new Message(i,0);
         }
         Message[] gameMessages = new Message[numberOfGameMessages];
         for (int i = 0; i < gameMessages.length; i++) {
@@ -84,7 +84,7 @@ class Message {
             // messageClass 0 is for system messages.
             if (messageClass == 0) {
                 if (id == 0) {
-                    returnDescription = " How many rolls are wanted for each turn?";
+                    returnDescription = "How many rolls are wanted for each turn?";
                 }
                 if (id == 1) {
                     returnDescription = "How many sides are wanted for each die?";
