@@ -25,7 +25,7 @@ class Message {
     // language must be set via setLanguage, before Message objects are created.
     // This is due to the fact that language is used to generate descriptions for
     // Message objects.
-    public void setLanguage(String languageInput) {
+    public static void setLanguage(String languageInput) {
         language = languageInput;
     }
 
