@@ -84,15 +84,15 @@ class game{
 
                 //Gets the field value and sets  player's cash balance 
                 var points = Field.fieldPoint(rolls[2]);
-                Player1.setPlayerCashBalance(points);
+                Player2.setPlayerCashBalance(points);
 
                 //Prints field info and updated player account balance
                 System.out.println(messages[3][rolls[2]]);
-                var updatedCashBalance = Player1.getPlayerAccountBalance();
+                var updatedCashBalance = Player2.getPlayerAccountBalance();
                 System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
 
                 //check if player1 has won
-                winnerFound = WinCondition.getWinCon(Player1);
+                winnerFound = WinCondition.getWinCon(Player2);
                 
                 // if the winner has been found it break out of the while loop
                 if(winnerFound) {
