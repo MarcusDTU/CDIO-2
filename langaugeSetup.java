@@ -1,6 +1,6 @@
 import javax.annotation.processing.Messager;
 class languageselecter{
-    public void languageSetup(){
+    public static void languageSetup(){
         boolean languageFound = false;
         String gameLanguage = "";
         //create scanner obj
@@ -29,7 +29,7 @@ class languageselecter{
         }
         scanner.close();
         
-        Message.setLanguage(gameLanguage);
-        
+       Message.setLanguage(gameLanguage);
+    
     }
 }
