@@ -7,7 +7,7 @@ class Message {
     private static String language;
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
-    private static int numberOfSystemMessages = 1;
+    private static int numberOfSystemMessages = 2;
     private static int numberOfGameMessages = 1;
     private static int numberOfRollMessages = 1;
     private static int numberOfFieldMessages = 13;
