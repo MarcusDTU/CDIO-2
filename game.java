@@ -22,7 +22,7 @@ class game{
         System.out.println("Please enter the name of player 2: ");
         var name2 = scanner.nextLine();
         Player Player2 = new Player(name2, 2);
-        scanner.close();
+        //scanner.close();
 
         //creating dice
         var die = Die.createDie();

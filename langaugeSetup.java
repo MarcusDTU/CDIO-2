@@ -27,7 +27,7 @@ class Languageselecter{
 
         
         }
-        scanner.close();
+        //scanner.close();
         
        Message.setLanguage(gameLanguage);
     
