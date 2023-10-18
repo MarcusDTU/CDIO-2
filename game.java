@@ -23,7 +23,7 @@ class game{
         scannerCreate.close();
 
         //creating dice
-        var die = createDie();
+        var die = Die.createDie();
 
         //Game prints the game info explaning the overall game flow
         System.out.println(messages[1][0]); //Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
