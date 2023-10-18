@@ -8,8 +8,8 @@ class Message {
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
     private static int numberOfSystemMessages = 2;
-    private static int numberOfGameMessages = 1;
-    private static int numberOfRollMessages = 1;
+    private static int numberOfGameMessages = 2;
+    private static int numberOfRollMessages = 4;
     private static int numberOfFieldMessages = 13;
 
     // The class constructors takes id and messageClass as input, and populates the
@@ -115,7 +115,7 @@ class Message {
                     returnDescription = "The value of die two is: ";
                 }
                   if (id == 3) {
-                    returnDescription = " Total sum of dice is: ";
+                    returnDescription = "Total sum of dice is: ";
                 }
 
             }
@@ -129,37 +129,37 @@ class Message {
                     returnDescription = "";
                 }
                 if (id == 2) {
-                    returnDescription = "";
+                    returnDescription = "2";
                 }
                 if (id == 3) {
-                    returnDescription = "";
+                    returnDescription = "3";
                 }
                 if (id == 4) {
-                    returnDescription = "";
+                    returnDescription = "4";
                 }
                 if (id == 5) {
-                    returnDescription = "";
+                    returnDescription = "5";
                 }
                 if (id == 6) {
-                    returnDescription = "";
+                    returnDescription = "6";
                 }
                 if (id == 7) {
-                    returnDescription = "";
+                    returnDescription = "7";
                 }
                 if (id == 8) {
-                    returnDescription = "";
+                    returnDescription = "8";
                 }
                 if (id == 9) {
-                    returnDescription = "";
+                    returnDescription = "9";
                 }
                 if (id == 10) {
-                    returnDescription = "";
+                    returnDescription = "10";
                 }
                 if (id == 11) {
-                    returnDescription = "";
+                    returnDescription = "11";
                 }
                 if (id == 12) {
-                    returnDescription = "";
+                    returnDescription = "12";
                 }
             }
         }
