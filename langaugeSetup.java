@@ -1,8 +1,8 @@
 import javax.annotation.processing.Messager;
-class languageselecter{
+class Languageselecter{
     public static void languageSetup(){
         boolean languageFound = false;
-        String gameLanguage = "";
+        String gameLanguage = "";       
         //create scanner obj
         var scanner = new java.util.Scanner(System.in);
         scanner.useLocale(java.util.Locale.ENGLISH);
