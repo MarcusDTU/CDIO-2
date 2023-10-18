@@ -5,10 +5,11 @@ class game{
         boolean winnerFound = false;
         boolean extraTurn = false;
         int playerTurn = 1;
-        languageselecter gameLanguageObj = new languageselecter();
+        
+        Languageselecter.languageSetup();
         
         //gameLanguageForMsg is the string that has beed saved from the languageSetup method and returns the selected language for later use in messege class
-        var gameLanguageForMsg = gameLanguageObj.languageSetup();
+        
 
         Message[][] messages = Message.createMessageArray();
 
