@@ -69,7 +69,7 @@ class game{
                 
             else if(playerTurn == 2) {
                 System.out.println(messages[2][0]); //Press enter to roll die.
-                roll = scanner.nextLine();
+                var roll = scanner.nextLine();
                 
                 while (!(roll.equals(""))) {
                     System.out.println(messages[2][0]); //Press enter to roll die.
