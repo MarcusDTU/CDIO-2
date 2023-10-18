@@ -76,7 +76,7 @@ class game{
                     System.out.println(messages[2][0]); //Press enter to roll die.
                 }
                 
-                var rolls = die.rollDie();
+                int [] rolls = die.rollDie();
                 System.out.println(messages[2][1] + "" + rolls[0] + System.lineSeparator() + messages[2][2] + "" + rolls[1] + System.lineSeparator() + messages[2][3] + "" + rolls[2]);
                 // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
 
