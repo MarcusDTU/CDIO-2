@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 class game{
     public static void main(String[] args){
@@ -14,14 +14,15 @@ class game{
         Message[][] messages = Message.createMessageArray();
 
         //creating the to players 
-        var scannerCreate = new Scanner(System.in);
+        var scanner = new java.util.Scanner(System.in);
+        scanner.useLocale(java.util.Locale.ENGLISH);
         System.out.println("Please enter the name of player 1: ");
-        var name1 = scannerCreate.nextLine();
+        var name1 = scanner.nextLine();
         Player Player1 = new Player(name1, 1);
         System.out.println("Please enter the name of player 2: ");
-        var name2 = scannerCreate.nextLine();
+        var name2 = scanner.nextLine();
         Player Player2 = new Player(name2, 2);
-        scannerCreate.close();
+        scanner.close();
 
         //creating dice
         var die = Die.createDie();
@@ -30,7 +31,8 @@ class game{
         System.out.println(messages[1][0]); //Players will take turns, rolling two dice to move to a field labeled with numbers from 2 to 12. Each field can either increase or decrease the player's money. All players start with a 1000 balance, and the winner is the first to reach 3000.
         
         //Game runs in a while loop which checks if a winner has been found. If not the game will continue to ask players to roll dice
-        Scanner scanner = new Scanner(System.in);
+        scanner = new java.util.Scanner(System.in);
+        scanner.useLocale(java.util.Locale.ENGLISH);
         while(!winnerFound) {
             
             if(playerTurn == 1) {
