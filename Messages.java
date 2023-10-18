@@ -106,10 +106,10 @@ class Message {
             // messageClass 2 is for roll-related messages.
             if (messageClass == 2) {
                 if (id == 0) {
-                    returnDescription = " Press enter to roll die.";
+                    returnDescription = "Press enter to roll die.";
                 }
                   if (id == 1) {
-                    returnDescription = " The value of die one is: ";
+                    returnDescription = "The value of die one is: ";
                 }
                   if (id == 2) {
                     returnDescription = "The value of die two is: ";
