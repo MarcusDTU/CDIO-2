@@ -45,7 +45,7 @@ class game{
                 // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
 
                 //Gets the field value and sets  player's cash balance 
-                var points = fieldPoint(rolls[2]);
+                var points = Field.fieldPoint(rolls[2]);
                 Player1.setPlayerCashBalance(points);
 
                 //Prints field info and updated player account balance
@@ -54,13 +54,13 @@ class game{
                 System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
 
                 //check if player1 has won
-                winnerFound = getWinCon(Player1);
+                winnerFound = WinCondition.getWinCon(Player1);
                 
                 // if the winner has been found it break out of the while loop
                 if(winnerFound) {
                     break;
                 }
-                ekstraTurn = ekstraTurn(rolls);
+                ekstraTurn = extraTurn(rolls);
                 
                 if(ekstraTurn == false){
                     playerTurn = 2;   
@@ -80,7 +80,7 @@ class game{
                 // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
 
                 //Gets the field value and sets  player's cash balance 
-                points = fieldPoint(rolls[2]);
+                points = Field.fieldPoint(rolls[2]);
                 Player1.setPlayerCashBalance(points);
 
                 //Prints field info and updated player account balance
@@ -89,14 +89,14 @@ class game{
                 System.out.println(messages[1][1] + "" + updatedCashBalance); //Your updated cash balance is:
 
                 //check if player1 has won
-                winnerFound = getWinCon(Player1);
+                winnerFound = WinCondition.getWinCon(Player1);
                 
                 // if the winner has been found it break out of the while loop
                 if(winnerFound) {
                     break;
                 }
                 
-                ekstraTurn = ekstraTurn(rolls);
+                ekstraTurn = extraTurn(rolls);
                 
                 if(ekstraTurn == false){
                     playerTurn = 1;    
