@@ -9,7 +9,7 @@ class Message {
     // of Message objects.
     private static int numberOfSystemMessages = 2;
     private static int numberOfGameMessages = 5;
-    private static int numberOfRollMessages = 6;
+    private static int numberOfRollMessages = 5;
     private static int numberOfFieldMessages = 13;
 
     // The class constructors takes id and messageClass as input, and populates the
@@ -127,11 +127,9 @@ class Message {
                     returnDescription = "Total sum of dice is: ";
                 }
                 if (id == 4) {
-                    returnDescription = "Player1.getName()";
+                    returnDescription = "'s turn.";
                 }
-                if (id == 5) {
-                    returnDescription = "Player2.getName()";
-                }
+               
 
             }
             // messageClass 3 is for field-related messages, where the id matches the sum of
