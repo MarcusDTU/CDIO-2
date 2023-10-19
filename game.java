@@ -46,7 +46,7 @@ class game{
                 }
 
                 int[] rolls = die.rollDie();
-                System.out.println(messages[2][1].getDesciption() + "" + rolls[0] + System.lineSeparator() + messages[2][2].getDesciption() + "" + rolls[1] + System.lineSeparator() + messages[2][3].getDesciption() + "" + rolls[2]);
+                System.out.println(messages[2][4].getDesciption() + System.lineSeparator() + messages[2][1].getDesciption() + "" + rolls[0] + System.lineSeparator() + messages[2][2].getDesciption() + "" + rolls[1] + System.lineSeparator() + messages[2][3].getDesciption() + "" + rolls[2]);
                 // 2.1 = The value of die one is:, 2.2 = The value of die two is:, 2.3 = Total sum of dice is:
 
                 //Gets the field value and sets  player's cash balance 
