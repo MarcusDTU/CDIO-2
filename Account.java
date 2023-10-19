@@ -15,12 +15,12 @@ class Account {
     public void setCashBalance(int money) {
         if (this.cashBalance + money >= 0) {
         this.cashBalance += money;
-        messages[1][2].getDesciption();
+        messages[1][2].printDescription();
         }
         else {
             this.cashBalance = 0;
             
-            messages[1][3].getDesciption();
+            messages[1][3].printDescription();
         }
     }
 }

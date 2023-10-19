@@ -110,10 +110,10 @@ class game{
         }
         scanner.close();
         if (Player1.getPlayerAccountBalance() >= 3000) {
-            System.out.println(Player1.getName() + messages[1][4]);
+            System.out.println(Player1.getName() + " " + messages[1][4].getDesciption());
         }
         else{
-            System.out.println(Player2.getName() + messages[1][4]);
+            System.out.println(Player2.getName() + " " + messages[1][4].getDesciption());
         }
     }
 }
