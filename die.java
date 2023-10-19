@@ -24,12 +24,40 @@ class Die {
     }
 
     public static Die createDie() {
+
+        boolean numberOfRollsFound = false;
+        boolean numberOfSidesFound = false;
+
         Message[][] messages = Message.createMessageArray();
         var scanner = new java.util.Scanner(System.in);
-        messages[0][0].printDescription(); //How many rolls are wanted for each turn?
-        var numberOfRolls = scanner.nextInt();
-        messages[0][1].printDescription(); //How many sides are wanted for each die?
-        var numberOfSides = scanner.nextInt();
+
+        int numberOfRolls = 0;
+        int numberOfSides = 0;
+
+        while(!numberOfRollsFound){
+            messages[0][0].printDescription(); //How many rolls are wanted for each turn?
+            numberOfRolls = scanner.nextInt();
+
+            if(numberOfRolls == 2){
+                numberOfRollsFound = true;
+            }
+            else{
+                System.out.println("Game dosn't support " + numberOfRolls + " rolls");
+            }
+        }
+        while(!numberOfSidesFound){
+            messages[0][1].printDescription(); //How many sides are wanted for each die?
+            numberOfSides = scanner.nextInt();
+
+            if(numberOfSides == 6){
+                numberOfSidesFound = true;
+            }
+            else{
+                System.out.println("Game dosn't support " + numberOfSides + " rolls");
+            }
+        }
+        
+        
         Die die = new Die(numberOfRolls, numberOfSides);
 
         return die;
@@ -37,4 +65,4 @@ class Die {
     
 
        
-    }
+}
