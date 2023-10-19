@@ -7,7 +7,7 @@ class Message {
     private static String language;
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
-    private static int numberOfSystemMessages = 2;
+    private static int numberOfSystemMessages = 4;
     private static int numberOfGameMessages = 5;
     private static int numberOfRollMessages = 5;
     private static int numberOfFieldMessages = 13;
@@ -88,6 +88,12 @@ class Message {
                 }
                 if (id == 1) {
                     returnDescription = "How many sides are wanted for each die?";
+                }
+                if (id == 2){
+                    returnDescription = "Number of rolls is not supported";
+                }
+                if (id == 3){
+                    returnDescription = "Number of sides is not supported";
                 }
             }
             // messageClass 1 is for game-related messages that do not belong to either roll
