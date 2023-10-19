@@ -8,7 +8,7 @@ class Message {
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
     private static int numberOfSystemMessages = 2;
-    private static int numberOfGameMessages = 2;
+    private static int numberOfGameMessages = 4;
     private static int numberOfRollMessages = 6;
     private static int numberOfFieldMessages = 13;
 
@@ -101,6 +101,12 @@ class Message {
                 }
                 if (id == 1){
                     returnDescription = "Your updated cash balance is: ";       
+                }
+                if (id == 2){
+                    returnDescription = "Account updated.";       
+                }
+                if (id == 3){
+                    returnDescription = "You're broke and couldn't pay your bills.";       
                 }
             }
             // messageClass 2 is for roll-related messages.

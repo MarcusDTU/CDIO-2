@@ -1,7 +1,8 @@
 class Account {
     private int id;
     private int cashBalance;
-    
+    Message[][] messages = Message.createMessageArray();
+
     public Account(int id) {
         this.id = id;
         this.cashBalance = 1000;
@@ -14,12 +15,12 @@ class Account {
     public void setCashBalance(int money) {
         if (this.cashBalance + money >= 0) {
         this.cashBalance += money;
-        System.out.println("Money deposited, but you're still broke"); //Add custom messages from message class
+        messages[1][2].getDesciption();
         }
         else {
             this.cashBalance = 0;
             
-            System.out.println("You're broke and couldn't pay your bills"); //Add custom messages from message class
+            messages[1][3].getDesciption();
         }
     }
 }
