@@ -42,7 +42,7 @@ class Die {
                 numberOfRollsFound = true;
             }
             else{
-                System.out.println("Game dosn't support " + numberOfRolls + " rolls");
+                messages[0][2].printDescription();
             }
         }
         while(!numberOfSidesFound){
@@ -53,7 +53,7 @@ class Die {
                 numberOfSidesFound = true;
             }
             else{
-                System.out.println("Game dosn't support " + numberOfSides + " rolls");
+                messages[0][3].printDescription();
             }
         }
         
