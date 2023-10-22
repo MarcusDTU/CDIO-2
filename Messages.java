@@ -148,7 +148,7 @@ class Message {
                     returnDescription = "";
                 }
                 if (id == 2) {
-                    returnDescription = "Tower: You have found a lone tower surrounded by lava. You decide to investigate the tower, only to stumble upon a sleeping princess. You walk towards her and start shaking her violently. She gets quite mad and commands you to slay the dragon that guards her tower. After you have slayed the dragon, the princess offers you some gold, but the princess is a greedy c*** and only gives you 250 gold. You think to yourself: “What a horribly woman.”";
+                    returnDescription = "Tower: You have found a lone tower surrounded by lava. You decide to investigate the tower, only to stumble upon a sleeping princess. You walk towards her and start shaking her violently. She gets quite mad and commands you to slay the dragon that guards her tower. After you have slayed the dragon, the princess offers you some gold, but the princess is a greedy c*** and only gives you 250 gold. You think to yourself: What a horribly woman.";
                 }
                 if (id == 3) {
                     returnDescription = "Crater: On your way back home, you get pre-occupied with thinking about how awesome it is to be a noble.  Due to your dangerous lack of awareness of your surroundings, you end up falling into a big crater, where you are trapped. Luckily, a princess is nearby to help you up. After you got up from the pit, the princess demands that you pay her 100 gold for the rescue mission. ";
@@ -166,10 +166,10 @@ class Message {
                     returnDescription = "Monastery: You want to get drunk beyond any recognition and you have heard rumors about the monks at the monastery brewing some strong beer. The monks are very generous and don’t want any gold for all the beer you drank.  You end the night sleeping in the mud with a smile on your face. You consider establishing a monastery in your realms for a steady supply of free beer.";
                 }
                 if (id == 8) {
-                    returnDescription = "Black cave: You entered a dark cave. All the sudden you hear a voice behind you. “Give me all your gold” says the thief. However, you are a master negotiator and end up paying 80 gold plus your underpants to the thief. You really miss your underpants due to the chaffing of your chainmail.";
+                    returnDescription = "Black cave: You entered a dark cave. All the sudden you hear a voice behind you. Give me all your gold says the thief. However, you are a master negotiator and end up paying 80 gold plus your underpants to the thief. You really miss your underpants due to the chaffing of your chainmail.";
                 }
                 if (id == 9) {
-                    returnDescription = "Huts in the mountain: While hiking in the mountain, you hear loud music playing. While following the music, you find a hut, where some students from DTU are holding an Après Ski party.  Some mechanical engineering student challenge you to a beer pong tournament. After destroying them, you win 60 gold. 60 gold doesn’t seem as much, but then you remember that the students are poor. You temporarily consider a career as a professional beer pong player. ";
+                    returnDescription = "Huts in the mountain: While hiking in the mountain, you hear loud music playing. While following the music, you find a hut, where some students from DTU are holding an Après Ski party.  Some mechanical engineering student challenge you to a beer pong tournament. After destroying them, you win 60 gold. 60 gold doesn’t seem as much, but then you remember that the students are poor. You temporarily consider a career as a professional beer pong player.";
                 }
                 if (id == 10) {
                     returnDescription = "The Werewall:  In Eldoria's Thicket of Shadows stands the Werewall, a living barrier made from spirits of ancient werewolves. Created for protection, it shifts and howls, granting passage only to those with pure intent. You pay the toll of 80 gold. But hey, you can continue your adventure (extra turn).";
