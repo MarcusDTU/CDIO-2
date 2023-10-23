@@ -6,9 +6,7 @@ class Field{
         /*check which field the player rolled and return the money cooresponding to the dice sum */
         int balanceChange; 
         int [] money = {0, 250, -100, 100,-20, 180, 0, -70, 60, -80, -50, 650};
-        System.out.println(rolls);
         balanceChange = money[rolls-1];
-        System.out.println(balanceChange);
         return balanceChange;
     }
 
