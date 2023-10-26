@@ -6,7 +6,7 @@ class game{
         boolean extraTurn = false;
         int playerTurn = 1;
         
-        Languageselecter.languageSetup();
+        LanguageSelector.languageSetup();
         
         //gameLanguageForMsg is the string that has beed saved from the languageSetup method and returns the selected language for later use in messege class
         
