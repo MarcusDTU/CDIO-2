@@ -84,10 +84,10 @@ class Message {
             // messageClass 0 is for system messages.
             if (messageClass == 0) {
                 if (id == 0) {
-                    returnDescription = "How many rolls are wanted for each turn?";
+                    returnDescription = "How many rolls are wanted for each turn? (Note: This game only supports two rolls)";
                 }
                 if (id == 1) {
-                    returnDescription = "How many sides are wanted for each die?";
+                    returnDescription = "How many sides are wanted for each die? (Note: This game only supports six sides)";
                 }
                 if (id == 2){
                     returnDescription = "Number of rolls is not supported";
