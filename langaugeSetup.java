@@ -1,5 +1,5 @@
 import javax.annotation.processing.Messager;
-class Languageselecter{
+class LanguageSelector{
     public static void languageSetup(){
         boolean languageFound = false;
         String gameLanguage = "";       
