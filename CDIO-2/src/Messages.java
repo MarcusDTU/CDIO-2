@@ -4,7 +4,7 @@ class Message {
     private int messageClass;
     private String description;
     private String idDescription;
-    private static String language;
+    private static String language = "english";
     // These are used by createMessageArray to create a bi-dimensional jagged array
     // of Message objects.
     private static int numberOfSystemMessages = 4;
@@ -27,6 +27,9 @@ class Message {
     // Message objects.
     public static void setLanguage(String languageInput) {
         language = languageInput;
+    }
+    public static String getLanguage(){
+        return language;
     }
 
     // This method is used to create a Message[][], which contains all messages of a
