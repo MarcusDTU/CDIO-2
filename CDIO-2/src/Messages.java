@@ -28,6 +28,9 @@ class Message {
     public static void setLanguage(String languageInput) {
         language = languageInput;
     }
+    public static String getLanguage(){
+        return language;
+    }
 
     // This method is used to create a Message[][], which contains all messages of a
     // given language. The first row contains system messages, the second row
@@ -84,10 +87,10 @@ class Message {
             // messageClass 0 is for system messages.
             if (messageClass == 0) {
                 if (id == 0) {
-                    returnDescription = "How many rolls are wanted for each turn? (Note: This game only supports two rolls)";
+                    returnDescription = "How many rolls are wanted for each turn?";
                 }
                 if (id == 1) {
-                    returnDescription = "How many sides are wanted for each die? (Note: This game only supports six sides)";
+                    returnDescription = "How many sides are wanted for each die?";
                 }
                 if (id == 2){
                     returnDescription = "Number of rolls is not supported";
