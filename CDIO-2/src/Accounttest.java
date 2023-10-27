@@ -1,6 +1,7 @@
+
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-public class Accounttest {
+public class AccountTest {
     Player Player1 = new Player("Test", 1);
     @Test
     public void setPlayerCashBalanceTest(){
