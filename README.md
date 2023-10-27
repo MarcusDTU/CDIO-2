@@ -1,5 +1,5 @@
 # CDIO-2
-CDIO-2
+CDIO-2 Guide
 
 How to download project:
 
