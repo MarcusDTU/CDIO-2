@@ -4,7 +4,7 @@ CDIO-2
 How to download project:
 
 1) Via Git Bash:
-  a) Navigate to the folder you want the project to exists within
+  a) Navigate to the folder you want the project to exists within 
   b) Open Git Bash from within the folder
   c) Git clone https://github.com/MarcusDTU/CDIO-2
 
