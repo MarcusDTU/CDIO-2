@@ -7,8 +7,4 @@ public class Accounttest {
         Player1.setPlayerCashBalance(-3000);
         assertEquals(0,Player1.getPlayerAccountBalance());
     }
-
-
-
-
 }
